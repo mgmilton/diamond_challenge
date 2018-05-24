@@ -47,31 +47,13 @@ class DiamondPrinter
     end
     to_print
   end
-
-  def bottom_print
-    to_print = []
-    num2 = 0
-    num3 = letters.length
-    half = (letters.length * 2) - 3
-    letters.each_with_index do |letter, index|
-      spot = letters.length - index - 1
-      if index == 0
-        next
-      else
-        to_print << " " * ((letters.length*2)-half) + "#{letters[spot]}" + (" " * num3 * 2) + "#{letters[spot]}"
-      end
-      half -= 1
-      num2 += 1
-      num3 -= 1
-    end
-    to_print
-  end
-
+  
   def printer
     top_print.each do |x|
       puts x
     end
-    bottom_print.each do |x|
+    top_print.pop
+    top_print.reverse.each do |x|
       puts x
     end
   end

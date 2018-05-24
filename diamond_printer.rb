@@ -57,8 +57,6 @@ class DiamondPrinter
       spot = letters.length - index - 1
       if index == 0
         next
-      elsif index = letters.length
-        to_print << " " * ((letters.length*2)-half) + "#{letters[spot]}"
       else
         to_print << " " * ((letters.length*2)-half) + "#{letters[spot]}" + (" " * num3 * 2) + "#{letters[spot]}"
       end

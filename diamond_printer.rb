@@ -21,15 +21,6 @@ class DiamondPrinter
     letters << last
   end
 
-  def print
-    0.upto(letters.length*2) do |x|
-      num2 = 1
-      half = (letters.length / 2)
-      string = (" " * (half-num2) + "#{letters[x]}")
-      pr string
-    end
-  end
-
   def top_print
     to_print = []
     num2 = 1
@@ -47,7 +38,7 @@ class DiamondPrinter
     end
     to_print
   end
-  
+
   def printer
     top_print.each do |x|
       puts x

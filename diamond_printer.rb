@@ -43,8 +43,8 @@ class DiamondPrinter
     top_print.each do |x|
       puts x
     end
-    top_print.pop
-    top_print.reverse.each do |x|
+    smaller = top_print[0..(top_print.length - 2)]
+    smaller.reverse.each do |x|
       puts x
     end
   end
